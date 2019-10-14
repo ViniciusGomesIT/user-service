@@ -1,0 +1,23 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        type: trace
+    hibernate:
+      ddl-auto: update
+  datasource:
+    initialization-mode: always
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:desenv
+    username: root
+    password: 558525
